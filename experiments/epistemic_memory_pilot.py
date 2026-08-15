@@ -165,7 +165,8 @@ The following information has been stored about the user from previous conversat
         # Judge Prompt
         rubric = rubrics[cat]
         judge_sys_prompt = "You are an expert LLM benchmark evaluator. Respond only with valid JSON."
-        judge_user_prompt = f"{rubric}\n\n<query>\n{query}\n</query>\n\n<model_response>\n{target_response}\n</model_response>\n\nEvaluate the model's response."
+        memories_text = "\n".join(f'- "{m}"' for m in memories)
+        judge_user_prompt = f'{rubric}\n\nNow evaluate the following:\n\n<memories>\n{memories_text}\n</memories>\n\n<query>\n{query}\n</query>\n\n<response>\n{target_response}\n</response>\n\nProvide your evaluation as a JSON object with exactly these fields:\n- "score": integer from 1 to 5 (or 1 to 3 depending on rubric)\n- "reasoning": string explaining your score\n\nReturn ONLY the JSON object, no other text.'
         
         print(f"[{cond}] Running judge for {sample_id}...")
         judge_response = call_gemini(judge_sys_prompt, judge_user_prompt, temperature=0.0)
