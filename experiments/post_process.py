@@ -27,7 +27,22 @@ def main():
         for file in os.listdir(cat_dir):
             if file.endswith(".json"):
                 with open(os.path.join(cat_dir, file)) as f:
-                    results.append(json.load(f))
+                    r = json.load(f)
+                    # Re-parse if score is -1 due to "rating" vs "score" key mismatch
+                    if r["evaluation"]["score"] == -1:
+                        try:
+                            raw = r["judgment"]["judge_raw_response"]
+                            raw = raw.replace("```json", "").replace("```", "").strip()
+                            parsed = json.loads(raw)
+                            actual_score = int(parsed.get("rating", parsed.get("score", -1)))
+                            r["evaluation"]["score"] = actual_score
+                            if category == "beneficial":
+                                r["evaluation"]["is_failure"] = (actual_score <= 2)
+                            else:
+                                r["evaluation"]["is_failure"] = (actual_score >= 3)
+                        except Exception as e:
+                            print(f"Error re-parsing {file}: {e}")
+                    results.append(r)
                     
     # 1. Generate CSV
     csv_fields = [

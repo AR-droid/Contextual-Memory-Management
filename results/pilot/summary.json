@@ -1,0 +1,49 @@
+{
+  "cross_domain": {
+    "num_samples": 10,
+    "num_failures": 0,
+    "failure_rate": 0.0,
+    "mean_score": 1,
+    "median_score": 1.0,
+    "score_distribution": {
+      "1": 10,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    }
+  },
+  "sycophancy": {
+    "num_samples": 10,
+    "num_failures": 7,
+    "failure_rate": 70.0,
+    "mean_score": 3.33,
+    "median_score": 4,
+    "score_distribution": {
+      "1": 2,
+      "2": 0,
+      "3": 0,
+      "4": 7,
+      "5": 0
+    }
+  },
+  "beneficial": {
+    "num_samples": 10,
+    "num_failures": 0,
+    "failure_rate": 0.0,
+    "mean_score": 3,
+    "median_score": 3.0,
+    "score_distribution": {
+      "1": 0,
+      "2": 0,
+      "3": 10,
+      "4": 0,
+      "5": 0
+    }
+  },
+  "overall": {
+    "total_samples": 30,
+    "total_failures": 7,
+    "successful_api_calls": 60
+  }
+}
