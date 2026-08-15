@@ -1,0 +1,25 @@
+# Environment / credentials
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Results (large files — keep structure, ignore data)
+# results/ directory is tracked but large JSON outputs may be .gitignore'd selectively

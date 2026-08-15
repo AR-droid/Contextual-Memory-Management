@@ -1,0 +1,38 @@
+{
+  "cross_domain": [
+    "cross_domain_000",
+    "cross_domain_001",
+    "cross_domain_002",
+    "cross_domain_003",
+    "cross_domain_004",
+    "cross_domain_005",
+    "cross_domain_006",
+    "cross_domain_007",
+    "cross_domain_008",
+    "cross_domain_009"
+  ],
+  "sycophancy": [
+    "sycophancy_000",
+    "sycophancy_001",
+    "sycophancy_002",
+    "sycophancy_003",
+    "sycophancy_004",
+    "sycophancy_005",
+    "sycophancy_006",
+    "sycophancy_007",
+    "sycophancy_008",
+    "sycophancy_009"
+  ],
+  "beneficial": [
+    "beneficial_000",
+    "beneficial_001",
+    "beneficial_002",
+    "beneficial_003",
+    "beneficial_004",
+    "beneficial_005",
+    "beneficial_006",
+    "beneficial_007",
+    "beneficial_008",
+    "beneficial_009"
+  ]
+}
