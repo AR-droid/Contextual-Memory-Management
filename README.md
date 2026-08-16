@@ -7,6 +7,7 @@ This repository is a **research prototype** and ongoing investigation into persi
 While persistent memory allows LLMs to hyper-personalize their responses over time, it also introduces a severe risk of *memory-induced sycophancy*—where the model inappropriately treats a user's subjective beliefs, biases, or flawed assumptions as objective truth. 
 
 This project is an experimental architecture designed to explore how an LLM system can dynamically control the epistemic authority of a retrieved memory before it reaches the generator's context window.
+https://medium.com/@anjanarangarajan06/when-should-an-ai-use-its-memory-an-experiment-on-persistent-memory-in-llm-agents-5e282f6901c0
 
 ## Quick Start
 
